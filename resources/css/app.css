@@ -1,0 +1,17 @@
+@import "highlight.js/styles/a11y-dark.css" screen;
+@import "highlight.js/styles/a11y-dark.css" screen and (prefers-color-scheme: dark);
+
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+@layer  {
+    html[data-dark-mode-on=true]{
+    @import "highlight.js/styles/a11y-dark.css";
+    }
+
+    html[data-dark-mode-on=false]{
+    @import "highlight.js/styles/a11y-light.css";
+    }
+
+}
